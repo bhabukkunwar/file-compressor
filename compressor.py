@@ -11,7 +11,7 @@ class CompressFactory:
             return  LzmaCompress()
 
 class FileCompress:
-    def __init__(self, algorithm):
+    def __init__(self, algorithm: str):
         self.algorithm = algorithm
         self.factory = CompressFactory()
 
