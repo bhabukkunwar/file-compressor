@@ -1,4 +1,4 @@
-from algorithms import GzipCompress, Bz2Compress, LzmaCompress
+from .algorithms import GzipCompress, Bz2Compress, LzmaCompress
 
 class CompressFactory:
     @staticmethod

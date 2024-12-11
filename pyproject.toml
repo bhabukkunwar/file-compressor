@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "file-compressor"
+version = "1.0.0"
+authors = [
+  { name="Bhabuk Kunwar", email="bhabukunwar@gmail.com" },
+]
+maintainers = [
+    {name="bhabukunwar@gmail.com"}
+]
+description = "File Compressor Package"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[tool.hatch.build.targets.wheel]
+packages = ["src/file-compressor"]

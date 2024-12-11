@@ -2,7 +2,7 @@ import gzip
 import lzma
 import bz2
 import shutil
-from interface import CompressionAlgorithm
+from .interface import CompressionAlgorithm
 
 class GzipCompress(CompressionAlgorithm):
     def compress(self, inputfilepath: str, outputfilepath: str):
