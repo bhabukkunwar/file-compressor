@@ -21,15 +21,15 @@ class FileCompress:
             algorithm = self.factory.get_compression_algo(self.algorithm)
             algorithm.compress(inputfilepath,outputfilepath)
         except ValueError as ve:
-            print(f"Error: {ve}")
+            raise ValueError(f"Unsupported compression algorithm: {self.algorithm}")
         except Exception as e:
-            print(f"Unexpected error during compression: {e}")
+            raise e
 
     def decompress(self, inputfilepath: str, outputfilepath: str):
         try:
             algorithm = self.factory.get_compression_algo(self.algorithm)
             algorithm.decompress(inputfilepath, outputfilepath)
         except ValueError as ve:
-            print(f"Error: {ve}")
+            raise ValueError(f"Unsupported compression algorithm: {self.algorithm}")
         except Exception as e:
-            print(f"Unexpected error during compression: {e}")
+            raise e
