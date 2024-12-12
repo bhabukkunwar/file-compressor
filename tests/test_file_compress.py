@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import MagicMock
-from src.compressor import FileCompress, CompressFactory
+from src.file_compressor import FileCompress, CompressFactory
 
 
 # Mock the compression classes

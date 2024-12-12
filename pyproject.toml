@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "file-compressor"
+name = "file_compressor"
 version = "1.0.0"
 authors = [
   { name="Bhabuk Kunwar", email="bhabukunwar@gmail.com" },
