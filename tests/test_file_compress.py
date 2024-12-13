@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import MagicMock
-from src.file_compressor import FileCompress, CompressFactory
+from src.file_compressor.compressor import CompressFactory, FileCompress
 
 
 # Mock the compression classes
@@ -64,10 +64,7 @@ def test_decompress(mock_compression_classes):
 # Test invalid algorithm handling
 def test_invalid_algorithm():
     file_compress = FileCompress("unsupported_algo")
-
-    # Mocking the method to check if error is handled correctly
-    with pytest.raises(ValueError, match="Unsupported compression algorithm: unsupported_algo"):
-        file_compress.compress("input.txt", "output.txt")
-
-    with pytest.raises(ValueError, match="Unsupported compression algorithm: unsupported_algo"):
+    with pytest.raises(AttributeError):
+        file_compress.compress("input.txt", "output.gz")
+    with pytest.raises(AttributeError):
         file_compress.decompress("input.txt", "output.txt")

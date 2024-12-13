@@ -1,1 +1,1 @@
-from compressor import FileCompress, CompressFactory
+from .compressor import FileCompress

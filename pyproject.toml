@@ -21,4 +21,4 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 [tool.hatch.build.targets.wheel]
-packages = ["src/file-compressor"]
+packages = ["src/file_compressor"]
